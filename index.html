@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./fontawesome/css/brands.min.css">
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Skills</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="icon" onclick="closemenu()">out</i>
+                </ul>
+                <i class="icon" onclick="openmenu()">in</i>
+            </nav>
+            <div class="header-text">
+                <p>BICT Student</p>
+                <h1>Hi, I'am <span>Jathu</span><br>From batticaloa</h1>
+            </div>
+
+        </div>
+
+    </div>
+    <!--  ------------about------------  -->
+
+<div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/pic1.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am Y. Jathusdhan, an aspiring Software Engineer with a strong passion for technology, problem-solving, 
+                        and innovation. Currently pursuing my studies at the Faculty of Technology, I am developing skills in software development, 
+                        user-centered design, and modern tools such as Figma.
+                       I am a hardworking and detail-oriented individual, eager to apply my knowledge in real-world projects while continuously 
+                       improving my technical and analytical abilities. My long-term ambition is to contribute to impactful solutions in the field 
+                       of software engineering.</p>
+                       <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                       </div>
+                       <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Desiging Web.App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Android/ios apps</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>UI/UX</span><br>I have experience in UI/UX designing for web and mobile applications.</li>
+                            <li><span>Web Development</span><br>I have hands-on knowledge in web development using frontend technologies.</li>
+                            <li><span>App Development</span><br>I am experienced in mobile app development for Android and iOS platforms.</li>
+                        </ul>
+                       </div>
+                       <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>O/L</span><br>PASS</li>
+                            <li><span>A/L</span><br>PASS</li>
+                            <li><span>UNIVERSITY</span><br>STUDY</li>
+                        </ul>
+                       </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+      <!--  ------------Projects------------  -->
+
+
+<!--  ------------my work------------  -->
+  <div id="portfolio">
+    <div class="container">
+         <h1 class="sub-title">My work</h1>
+         <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>PHONE APP</h3>
+                    <p>I designed a mobile phone app with a modern and intuitive UI/UX. The design ensures smooth navigation, clear icons, and responsive layouts. I created wireframes and prototypes in Figma, focusing on usability, consistency, and accessibility to deliver an engaging and seamless user experience across Android and iOS devices.
+                   
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                   <div class="layer">
+                    <h3>FOOD APP</h3>
+                    <p>I designed a food delivery app focusing on a clean and user-friendly UI/UX. The app includes easy navigation, food category browsing, cart management, and secure checkout flow. I created wireframes and prototypes using Figma, ensuring consistency, accessibility, and engaging visuals to improve customer experience.
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                   <div class="layer">
+                    <h3>PHONE APP</h3>
+                    <p>fI designed a bus timetable website with a simple and user-friendly UI/UX. The site allows users to easily search routes, check bus timings, and view schedules. I used Figma to create wireframes and prototypes, focusing on clarity, consistency, and accessibility for a smooth browsing experience.
+                    </p>
+            
+                </div>
+            </div>
+         </div>
+         
+    </div>
+
+  </div>
+  <!--  ------------contact------------  -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p>jathurshanjohn2217@gmail.com</p>
+                    <p>0778446249</p>
+              
+                    <a href="Blue and White Modern Professional Resume.pdf" download class="btn btn2">Download Cv</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright jathurshan.Made ffg grgr gfhfhg trgrtgrgr</p>
+        </div>
+
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link")
+            document.getElementById(tabname).classList.add("active-tab")
+            
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
